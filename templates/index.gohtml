@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="POST">
+
+    <input placeholder="Название карты" name="name">
+    <input placeholder="Описание карты" name="description">
+
+    <select name="class_">
+
+        <option>zzz</option>
+
+
+    </select>
+
+    <select name="type">
+        <option>123</option>
+
+    </select>
+
+    </select>
+    <select name="rare">
+
+        <option>123</option>
+
+    </select>
+
+
+    </select>
+    <select name="attack">
+
+        <option>123</option>
+    </select>
+
+    </select>
+    <select name="mana">
+        <option>123</option>
+
+    </select>
+    </select>
+    <select name="life">
+        <option>123</option>
+
+    </select>
+    <select name="keyword">
+        <option>123</option>
+    </select>
+    <input type="submit" value="Добавить карту">
+</form>
+    {{range .}}
+    <p>333{{range .Class1}}</p>
+        {{.}}
+        {{end}}
+
+{{end}}
+
+</body>
+</html>
