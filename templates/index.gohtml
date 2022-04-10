@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
 <form action="/create">
+	
+    <label>Название карты<input placeholder="Название карты" name="title_card"></label>
 
-    <input placeholder="Название карты" name="title_card">
-    <input placeholder="Описание карты" name="description">
+    <label>Краткое описание карты<input placeholder="Описание карты" name="description"></label>
     
     {{range .}}
-
+	<label>Класс карты
     <select name="class_card">
     
     	
@@ -22,6 +24,7 @@
 
 
     </select>
+    </label>
 
     <select name="type">
         		{{range .Type_card}}</p>
@@ -76,13 +79,7 @@
     <input type="submit" value="Добавить карту">
     {{end}}
     
-     <select> // for loop in html template example
-   {{range $key, $value := .}}
-     <option value="{{ $value }}">{{ $key }}</option>
-   {{end}}
 
-
- </select>
 
 </form>
 
