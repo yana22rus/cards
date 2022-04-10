@@ -5,27 +5,39 @@
     <title>Title</title>
 </head>
 <body>
-<form method="POST">
+<form action="/create">
 
-    <input placeholder="Название карты" name="name">
+    <input placeholder="Название карты" name="title_card">
     <input placeholder="Описание карты" name="description">
+    
+    {{range .}}
 
-    <select name="class_">
-
-        <option>zzz</option>
+    <select name="class_card">
+    
+    	
+		{{range .Class_card}}</p>
+        <option>{{.}}</option>
+        
+        {{end}}
 
 
     </select>
 
     <select name="type">
-        <option>123</option>
+        		{{range .Type_card}}</p>
+        <option>{{.}}</option>
+        
+        {{end}}
 
     </select>
 
     </select>
     <select name="rare">
 
-        <option>123</option>
+                		{{range .Rare_card}}</p>
+        <option>{{.}}</option>
+        
+        {{end}}
 
     </select>
 
@@ -33,30 +45,47 @@
     </select>
     <select name="attack">
 
-        <option>123</option>
+        
+                		{{range .Attack_card}}</p>
+        <option>{{.}}</option>
+        
+        {{end}}
     </select>
 
     </select>
     <select name="mana">
-        <option>123</option>
+
+                		{{range .Mana_card}}</p>
+        <option>{{.}}</option>
+        
+        {{end}}
 
     </select>
     </select>
     <select name="life">
-        <option>123</option>
+        
+                		{{range .Life_card}}</p>
+        <option>{{.}}</option>
+        
+        {{end}}
 
     </select>
     <select name="keyword">
         <option>123</option>
     </select>
     <input type="submit" value="Добавить карту">
-</form>
-    {{range .}}
-    <p>333{{range .Class1}}</p>
-        {{.}}
-        {{end}}
+    {{end}}
+    
+     <select> // for loop in html template example
+   {{range $key, $value := .}}
+     <option value="{{ $value }}">{{ $key }}</option>
+   {{end}}
 
-{{end}}
+
+ </select>
+
+</form>
+
 
 </body>
 </html>
